@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 :root {
     --body-color: linear-gradient(217deg, rgb(179 124 124 / 60%), 
@@ -40,47 +41,40 @@ html, body, #__next {
 }
 
 .site__menu {
-    padding-top: 24px;
     height: 80px;
-    width: 964px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    color: white;
     align-items: center;
-
+    justify-content: space-between;
+    padding-top: 24px;
     .menu__logo {
-        font-size: 24px;
-        color: white;
-        font-weight: 700;
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
         align-items: center;
-        flex-wrap: nowrap;
 
-        .logo__text {
-            display: inline-block;
-            margin-left: 24px;
+        .menu__img {
+            margin-right: 5px;
+        }
+        .menu__name {
+            margin-left: 4px;
+            font-size: 26px;
+            font-weight: 700;
+
         }
     }
-
-    .menu__list {
+    .menu__urls {
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        align-items: center;
-
+        opacity: .65;
         a {
             color: white;
             text-decoration: none;
             cursor: pointer;
             font-size: 18px;
             margin-left: 24px;
+            transition: all ease .2s;
 
             &:hover {
                 text-decoration: underline;
+                opacity: .9;
             }
         }
     }
@@ -92,29 +86,31 @@ html, body, #__next {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
-    justify-content: center;
 }
 
 .site__slider {
     border: 2px dashed rgb(255 255 255 / 24%);
     height: 460px;
-    width: 100%;
+    margin-top: 30px;
+}
 
+.site__slider {
+    width: 100%;
+    height: 460px;
     .slider__list {
         width: 100%;
         height: 460px;
-
         .slider__block {
             width: 100%;
             height: 460px;
             display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            .block__image {
 
-            .block__image {}
-
+            }
             .block__info {
                 width: 460px;
                 .info__title {
@@ -136,11 +132,10 @@ html, body, #__next {
     }
     .slider__menu {
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
         align-items: center;
         justify-content: center;
-        
+        flex-wrap: nowrap;
+        flex-direction: row;
         .menu__mark {
             width: 12px;
             height: 12px;
@@ -150,10 +145,74 @@ html, body, #__next {
             cursor: pointer;
             transition: opacity ease .25s;
             margin: 0 4px;
+        }
+    }
+}
 
-            &:hover {
-                opacity: 1;
-            }
+
+.site__category {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    .category__title {
+        color: white;
+        font-size: 32px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    .category__block {
+        display: flex;
+    }
+    .category__product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 70px 0 70px;
+        .product__title {
+            font-weight: 500;
+            color: white;
+        }
+        .product__subtitle {
+            display: flex;
+            text-align: center;
+            color: white;
+            opacity: .50;
+        }
+    }
+}
+
+.site__about {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    .about__text {
+        display: flex;
+        flex-direction: column;
+        .about__title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        .about__subtitle {
+            font-weight: 400;
+            font-size: 18px;
+            opacity: .85;
+        }
+        .about__buttom {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 18px;
+            background-color: red;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
         }
     }
 }
